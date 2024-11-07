@@ -6,7 +6,7 @@ This repository contains a Bash script designed to test the maps of the Cub3D pr
 
 1. Clone this repository directly into the cub3d folder of your user.
  ```bash
- git clone https://github.com/votre-utilisateur/cub3d-tester.git cub3d/cub3d-tester
+ git clone https://github.com/adrih1/Cub3d-Tester.git
   ```
 
  2. Make the script executable :
