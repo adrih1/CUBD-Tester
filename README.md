@@ -39,10 +39,10 @@ The script will then run tests for all maps in the maps/bad folder, and will pro
 
 ## Test Details
 
-Pour chaque fichier .cub, le script :
-1. Exécute Valgrind pour détecter les fuites de mémoire et les descripteurs de fichiers non fermés.
-2. Affiche un message de succès ou d'erreur selon les résultats :
-     Succès : Pas de fuites de mémoire ni de descripteurs de fichiers ouverts.
-     Erreur : Indique si des descripteurs de fichiers restent ouverts ou si des fuites de mémoire sont détectées.
+For each .cub file, the script:
+1. Runs Valgrind to detect memory leaks and open file descriptors.
+2. Displays a success or error message based on the results:
+    Success: No memory leaks or open file descriptors.
+    Error: Indicates if any file descriptors remain open or if memory leaks are detected.
 
-Le script fournit un résumé à la fin de chaque série de tests.
+The script provides a summary at the end of each test series.
