@@ -21,6 +21,8 @@ Run the script from the cub3d-tester folder :
 ```bash
   ./tester.sh
 ```
+⚠️ Do not launch ./tester.sh from VS Code's terminal, it will cause an opened fd error. Only use official computer's terminal.
+
 ## Separate tests
 
 You can also call ./tester + 'good or bad' to run only a specific part of the test:
