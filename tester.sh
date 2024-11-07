@@ -71,10 +71,22 @@ test_maps_in_directory() {
     echo -e "\n${BOLD}$success_count/$total_count Success for $dir_label maps${RESET}\n"
 }
 
-# Tester les maps dans le dossier "maps/bad"
-test_maps_in_directory "$MAP_DIR_BAD" "Bad"
+# Vérifie les arguments passés au script
+if [ "$1" == "good" ]; then
+    # Tester uniquement les maps valides
+    test_maps_in_directory "$MAP_DIR_GOOD" "Good"
 
-read -p "Appuyer sur Enter pour lancer les tests sur les maps valides..."
+elif [ "$1" == "bad" ]; then
+    # Tester uniquement les maps invalides
+    test_maps_in_directory "$MAP_DIR_BAD" "Bad"
 
-# Tester les maps dans le dossier "maps/good"
-test_maps_in_directory "$MAP_DIR_GOOD" "Good"
+else
+    # Tester les maps invalides puis les valides si aucun argument ou un argument invalide est passé
+    # Tester les maps dans le dossier "maps/bad"
+    test_maps_in_directory "$MAP_DIR_BAD" "Bad"
+
+    read -p "Press Enter to start testing the valid maps..."
+
+    # Tester les maps dans le dossier "maps/good"
+    test_maps_in_directory "$MAP_DIR_GOOD" "Good"
+fi
