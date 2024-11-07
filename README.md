@@ -9,7 +9,7 @@ This repository contains a Bash script designed to test the maps of the Cub3D pr
  git clone https://github.com/votre-utilisateur/cub3d-tester.git cub3d/cub3d-tester
   ```
 
- 2. Make the script exécutable :
+ 2. Make the script executable :
  ```bash
   cd cub3d/cub3d-tester  
   chmod +x tester.sh
@@ -21,6 +21,17 @@ Run the script from the cub3d-tester folder :
 ```bash
   ./tester.sh
 ```
+## Separate tests
+
+You can also call ./tester + 'good or bad' to run only a specific part of the test:
+
+```bash
+./tester.sh good
+```
+```bash
+./tester.sh bad
+```
+
 
 The script will then run tests for all maps in the maps/bad folder, and will prompt you to press Enter to start tests for the maps in maps/good.
 
