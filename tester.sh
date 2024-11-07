@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Codes de couleur
+GREEN="\033[0;32m"  # Vert
+YELLOW="\033[0;33m"
+RED="\033[0;31m"    # Rouge
+RESET="\033[0m"     # Réinitialise la couleur
+BOLD="\033[1m"      # Gras
+BLUE="\033[0;34m"   # Bleu
+
+
 # Dossiers contenant les maps à tester
 MAP_DIR_GOOD="maps/good"
 MAP_DIR_BAD="maps/bad"
@@ -13,13 +22,13 @@ if [ -z "$EXEC" ]; then
   exit 1
 fi
 
+# Vérifie si l'exécutable n'est pas nommé exactement 'cub3D'
+if [ "$(basename "$EXEC")" != "cub3D" ]; then
+  # Affiche le message en jaune
+  echo -e "{$YELLOW}Be careful, the subject asks to name the executable 'cub3D'. Rename it if you can.{$RESET}"
+fi
 
- Codes de couleur
-GREEN="\033[0;32m"  # Vert
-RED="\033[0;31m"    # Rouge
-RESET="\033[0m"     # Réinitialise la couleur
-BOLD="\033[1m"      # Gras
-BLUE="\033[0;34m"   # Bleu
+
 
 
 # Afficher le titre "CUB3D TESTER" en grand
