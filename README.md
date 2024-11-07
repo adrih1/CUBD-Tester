@@ -1,36 +1,30 @@
 # CUB3D Tester
 
-Ce dépôt contient un script Bash destiné à tester les maps du projet **Cub3D** (projet 42). Il permet de vérifier les fuites de mémoire et de descripteurs de fichiers en utilisant **Valgrind** pour chaque map présente dans les dossiers de tests, divisés en maps valides (`maps/good`) et maps invalides (`maps/bad`).
-
-## Prérequis
-
-Avant de commencer, assurez-vous d'avoir installé :
-- **Valgrind** : utilisé pour détecter les fuites de mémoire et autres erreurs.
-- **Cub3D** : le projet que vous souhaitez tester.
+This repository contains a Bash script designed to test the maps of the Cub3D project (42 project). It checks for memory leaks and file descriptor leaks by using Valgrind on each map present in the test folders, divided into valid maps (maps/good) and invalid maps (maps/bad).
 
 ## Installation
 
-1. **Clonez ce dépôt** directement dans le dossier `cub3d` de votre utilisateur.
+1. Clone this repository directly into the cub3d folder of your user.
  ```bash
  git clone https://github.com/votre-utilisateur/cub3d-tester.git cub3d/cub3d-tester
   ```
 
- 2. Rendez le script exécutable :
+ 2. Make the script exécutable :
  ```bash
   cd cub3d/cub3d-tester  
   chmod +x tester.sh
   ```
 
-## Utilisation
-Lancez le script à partir du dossier cub3d-tester :
+## How to run
+Run the script from the cub3d-tester folder :
 
 ```bash
   ./tester.sh
 ```
 
-Le script exécutera alors les tests pour toutes les maps présentes dans maps/bad, et vous demandera ensuite d’appuyer sur Entrée pour lancer les tests pour maps/good.
+The script will then run tests for all maps in the maps/bad folder, and will prompt you to press Enter to start tests for the maps in maps/good.
 
-## Détails du test
+## Test Details
 
 Pour chaque fichier .cub, le script :
 1. Exécute Valgrind pour détecter les fuites de mémoire et les descripteurs de fichiers non fermés.
