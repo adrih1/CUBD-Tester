@@ -25,7 +25,7 @@ fi
 # Vérifie si l'exécutable n'est pas nommé exactement 'cub3D'
 if [ "$(basename "$EXEC")" != "cub3D" ]; then
   # Affiche le message en jaune
-  echo -e "{$YELLOW}Be careful, the subject asks to name the executable 'cub3D'. Rename it if you can.{$RESET}"
+  echo -e "${YELLOW}Be careful, the subject asks to name the executable 'cub3D'. Rename it if you can.${RESET}"
 fi
 
 
